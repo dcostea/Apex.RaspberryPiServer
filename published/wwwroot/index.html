@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.NET Droid</title>
+    <link rel="stylesheet" href="/css/site.css" />
+
+    <script src="/lib/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="/lib/signalr/signalr.min.js"></script>
+    <script src="/js/site.js"></script>    
+</head>
+<body>
+    <div>
+        <main role="main">
+            <div class="readings">
+                <div class="reading">
+                    <img src="/images/lux.png" />
+                    <p id="lux">? %</p>
+                </div>
+                <div class="reading">
+                    <img src="/images/temp.png" /> 
+                    <p id="temp">? &deg;C</p>
+                </div>
+                <div class="reading">
+                    <img src="/images/infra.png" /> 
+                    <p id="infra">? %</p>
+                </div>
+                <div class="reading">
+                    <img src="/images/dist.png" /> 
+                    <p id="dist">? cm</p>
+                </div>
+            </div>
+            
+            <div class="states">
+                <input type="image" id="StandBy" src="/images/standby.png" class="source" value="StandBy" alt="Stand By" />
+                <input type="image" id="Lighter" src="/images/lighter.png" class="source" value="Lighter" alt="Lighter" />
+                <input type="image" id="FlashLight" src="/images/flash.png" class="source" value="FlashLight" alt="Flash Light" />
+                <input type="image" id="Infrared" src="/images/infrared.png" class="source" value="Infrared" alt="Infrared" />
+                <input type="image" id="Offline" src="/images/offline.png" class="none" value="Offline" alt="Offline" />
+            
+                <audio hidden id="hello1"><source src="/sounds/hello1.wav"></audio>
+                <audio hidden id="confirmation1"><source src="/sounds/confirmation1.wav"></audio>
+                <audio hidden id="denial1"><source src="/sounds/denial1.wav"></audio>
+                <audio hidden id="info1"><source src="/sounds/info1.wav"></audio>
+                <audio hidden id="warning1"><source src="/sounds/warning1.wav"></audio>
+                <audio hidden id="danger2"><source src="/sounds/danger2.wav"></audio>
+
+                <h1 id="state"></h1>
+            </div>
+
+            <div>
+                <a href="/api/sensor/data">See data</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
